@@ -1,0 +1,6 @@
+// Mechanics
+1. Spawn in queue 
+2. Upgrade Castle
+    Upgrade tree
+    
+3. Boost
