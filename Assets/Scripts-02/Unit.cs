@@ -154,7 +154,7 @@ public class Unit : MonoBehaviour
                {
                     Debug.Log($"{this.gameObject.name} hit {damage} damage to {currentTargetUnit.name}");
                     Projectile prj = Instantiate(projectilePrefab, firePos.transform.position, Quaternion.identity);
-                    prj.target = currentTargetUnit.transform;
+                    //prj.target = currentTargetUnit.transform;
                     prj.gameObject.SetActive(true);
                     currentTargetUnit.health -= damage;
                     attackSpeedTimer = attackSpeed;

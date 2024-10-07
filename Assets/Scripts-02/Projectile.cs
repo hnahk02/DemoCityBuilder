@@ -1,21 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-   public Transform target;
+   public Rigidbody rb;
 
-   
-   public void FixedUpdate(){
-    
-     if(target == null )
-     {
-        Destroy(this.gameObject);
-     }
-     else
-     {
-        this.transform.position = Vector3.MoveTowards(transform.position, target.transform.position, 5f * Time.fixedDeltaTime );
-     }
+   private void Start(){
+      rb = GetComponent<Rigidbody>();
+      rb.AddRelativeForce(Vector3.forward * 500);
+      Destroy(transform.gameObject, 1f);
+
    }
+   
 }
